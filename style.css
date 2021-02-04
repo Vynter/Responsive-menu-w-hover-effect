@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.center {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #188aff;
+}
+
+ul {
+    padding: 20px;
+    width: 300px;
+    position: relative;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+ul li {
+    position: relative;
+    list-style: none;
+}
+
+ul li::before {
+    content: "";
+    position: absolute;
+    top: 26px;
+    right: 10px;
+    width: 10px;
+    height: 10px;
+    background: #e0e0e0;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+li:hover::before {
+    background: #188aff;
+}
+
+ul li a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+ul li a .icon {
+    width: 60px;
+    height: 40px;
+    text-align: center;
+    margin: 10px;
+    overflow: hidden;
+}
+
+ul li a .icon .fa {
+    height: 100%;
+    width: 100%;
+    line-height: 40px;
+    font-size: 34px;
+    color: #333;
+    transition: 0.5s;
+}
+
+ul li a .icon .fa:last-child {
+    color: #188aff;
+}
+
+a:hover .fa:first-child {
+    transform: translateY(-100%);
+}
+
+a:hover .fa:last-child {
+    transform: translateY(-100%);
+}
+
+.name {
+    width: 100%;
+    display: block;
+    position: relative;
+    /*border: red 1px solid;
+    height: 100%;
+    line-height: 60px;*/
+    overflow: hidden;
+}
+
+.name span {
+    display: block;
+    color: #333;
+    font-weight: 500;
+    font-size: 18px;
+    /*line-height:20px ;*/
+    transition: 0.5s;
+}
+
+.name span::before {
+    content: attr(data-text);
+    position: absolute;
+    top: -100%;
+    left: 0;
+    color: #188aff;
+}
+
+a:hover span {
+    transform: translateY(100%);
+}
